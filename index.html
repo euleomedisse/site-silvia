@@ -21,68 +21,71 @@
         body { font-family: 'Montserrat', sans-serif; background-color: var(--branco-off); color: var(--azul-escuro); line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
 
-        header { display: flex; justify-content: space-between; align-items: center; padding: 30px 8%; background: transparent; position: absolute; width: 100%; z-index: 100; }
+        /* HEADER */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 25px 8%; background: transparent; position: absolute; width: 100%; z-index: 100; }
         .logo { font-size: 1.1rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--azul-escuro); }
         nav ul { display: flex; list-style: none; align-items: center; }
         nav ul li { margin-left: 30px; }
         nav ul li a { text-decoration: none; color: var(--azul-escuro); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* HERO - Grafismo removido conforme solicitado */
-        .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; min-height: 100vh; align-items: center; padding: 0 8%; background-color: var(--branco-off); position: relative; }
+        /* HERO */
+        .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; min-height: 90vh; align-items: center; padding: 0 8%; background-color: var(--branco-off); position: relative; }
         .hero-content { max-width: 500px; z-index: 2; }
         .hero-content h1 { font-size: 3.2rem; line-height: 1.1; margin-bottom: 25px; color: var(--azul-escuro); }
         .hero-content p { font-size: 1.1rem; margin-bottom: 35px; font-style: italic; opacity: 0.8; }
-        .hero-img-box { position: relative; height: 75vh; }
+        .hero-img-box { position: relative; height: 70vh; }
         .hero-img-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* QUIZ SECTION */
-        .quiz-section { background-color: var(--branco); padding: 120px 8%; text-align: center; }
-        .quiz-container { max-width: 800px; margin: 0 auto; min-height: 300px; display: flex; flex-direction: column; justify-content: center; }
+        /* QUIZ SECTION - AJUSTADA PARA AZUL PETRÓLEO */
+        .quiz-section { background-color: var(--azul-petroleo); padding: 70px 8%; text-align: center; color: white; }
+        .quiz-container { max-width: 800px; margin: 0 auto; min-height: 250px; display: flex; flex-direction: column; justify-content: center; }
         .quiz-question { display: none; }
         .quiz-question.active { display: block; animation: fadeIn 0.6s ease-out; }
-        .quiz-options { margin-top: 40px; }
-        .quiz-options button { background: none; border: 1px solid var(--verde-militar); padding: 12px 40px; margin: 10px; cursor: pointer; border-radius: 30px; transition: 0.4s; font-family: 'Montserrat'; font-size: 0.9rem; }
-        .quiz-options button:hover { background: var(--verde-militar); color: white; }
-        #quiz-result { display: none; padding: 60px; background: var(--branco-off); border-radius: 5px; }
-        #quiz-result h2 { font-size: 2.5rem; color: var(--azul-petroleo); margin-bottom: 20px; }
+        .quiz-options { margin-top: 30px; }
+        .quiz-options button { background: var(--verde-militar); border: 1px solid var(--verde-militar); padding: 12px 40px; margin: 10px; cursor: pointer; border-radius: 30px; transition: 0.4s; font-family: 'Montserrat'; font-size: 0.9rem; color: white; }
+        .quiz-options button:hover { background: transparent; border-color: white; }
+        #quiz-result { display: none; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 5px; }
+        #quiz-result h2 { font-size: 2.2rem; color: var(--dourado-suave); margin-bottom: 15px; }
 
         /* JUNG SECTION */
-        .jung-section { padding: 120px 8%; background-color: var(--branco-off); display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; align-items: center; }
-        .jung-content blockquote { font-family: 'Playfair Display'; font-size: 1.8rem; font-style: italic; margin-bottom: 30px; color: var(--azul-petroleo); line-height: 1.3; }
-        .jung-image img { width: 100%; height: 450px; object-fit: cover; border-radius: 2px; }
+        .jung-section { padding: 70px 8%; background-color: var(--branco-off); display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; align-items: center; }
+        .jung-content blockquote { font-family: 'Playfair Display'; font-size: 1.8rem; font-style: italic; margin-bottom: 20px; color: var(--azul-petroleo); line-height: 1.3; }
+        .jung-image img { width: 100%; height: 400px; object-fit: cover; }
 
         /* BENEFITS SECTION */
-        .benefits-section { padding: 100px 8%; background-color: var(--branco); }
-        .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 50px; }
-        .benefit-card { padding: 30px; border-left: 3px solid var(--dourado-suave); background: var(--branco-off); }
+        .benefits-section { padding: 70px 8%; background-color: var(--branco); }
+        .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px; }
+        .benefit-card { padding: 25px; border-left: 3px solid var(--dourado-suave); background: var(--branco-off); }
         .benefit-card h4 { font-family: 'Playfair Display'; font-size: 1.4rem; margin-bottom: 10px; }
 
-        /* SOBRE SILVIA - AZUL PETRÓLEO */
-        .about-silvia { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 100px 8%; gap: 100px; background-color: var(--azul-petroleo); color: white; }
+        /* SOBRE SILVIA - AZUL PETRÓLEO COM ESPAÇAMENTO AJUSTADO */
+        .about-silvia { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 80px 8%; gap: 80px; background-color: var(--azul-petroleo); color: white; }
         .about-image { position: relative; }
-        .about-image img { width: 100%; height: 550px; object-fit: cover; }
-        .about-image::after { content: ''; position: absolute; top: 30px; right: -30px; width: 100%; height: 100%; border: 1px solid var(--dourado-suave); z-index: -1; }
+        .about-image img { width: 100%; height: 500px; object-fit: cover; }
+        .about-image::after { content: ''; position: absolute; top: 20px; right: -20px; width: 100%; height: 100%; border: 1px solid var(--dourado-suave); z-index: -1; }
+        .about-silvia .content-box p { margin-bottom: 15px; } /* Ajuste de espaçamento interno */
+        .about-silvia .btn-gold { margin-top: 15px; } /* Botão mais próximo do texto */
 
         /* FINAL CTA */
-        .final-cta { padding: 100px 8%; text-align: center; background-color: var(--verde-militar); color: white; }
-        .final-cta h2 { font-size: 2.8rem; margin-bottom: 20px; }
-        .final-cta p { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .final-cta { padding: 70px 8%; text-align: center; background-color: var(--verde-militar); color: white; }
+        .final-cta h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .final-cta p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
 
-        .btn-gold { display: inline-block; background-color: var(--dourado-suave); color: var(--azul-escuro); padding: 16px 45px; text-decoration: none; border-radius: 4px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .btn-gold { display: inline-block; background-color: var(--dourado-suave); color: var(--azul-escuro); padding: 14px 45px; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .btn-gold:hover { background-color: #c4ab7d; transform: translateY(-2px); }
 
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s; }
 
         .exit-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 26, 31, 0.95); display: none; align-items: center; justify-content: center; z-index: 10000; }
-        .popup-box { background: white; padding: 60px; max-width: 550px; text-align: center; border-radius: 4px; position: relative; }
-        .close-popup { position: absolute; top: 20px; right: 20px; font-size: 1.5rem; cursor: pointer; color: #aaa; }
+        .popup-box { background: white; padding: 50px; max-width: 500px; text-align: center; position: relative; color: var(--azul-escuro); }
+        .close-popup { position: absolute; top: 15px; right: 15px; font-size: 1.5rem; cursor: pointer; color: #aaa; }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 1024px) {
-            .hero, .about-silvia, .jung-section, .benefits-grid { grid-template-columns: 1fr; }
-            .hero-content { order: 2; text-align: center; margin: 40px auto; }
-            .hero-img-box { order: 1; height: 50vh; }
+            .hero, .about-silvia, .jung-section, .benefits-grid { grid-template-columns: 1fr; padding: 50px 8%; }
+            .hero-img-box { height: 40vh; }
+            .hero-content h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -94,7 +97,7 @@
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato" class="btn-gold" style="padding: 10px 25px; border-radius: 25px; margin-top: 0;">Contato</a></li>
+                <li><a href="https://wa.me/5571982656083?text=Olá+Silvia!+Gostaria+de+entender+mais+sobre+a+jornada+de+bem-estar+e+marcar+um+horário." class="btn-gold" style="padding: 10px 25px; border-radius: 25px; margin-top: 0;">Falar com Silvia</a></li>
             </ul>
         </nav>
     </header>
@@ -113,7 +116,7 @@
     <section class="quiz-section" id="quiz">
         <div class="quiz-container">
             <div id="q1" class="quiz-question active">
-                <p style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 20px;">Auto-análise</p>
+                <p style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 20px; color: var(--dourado-suave);">Auto-análise</p>
                 <h2>Você sente que está vivendo no "automático" e perdeu o contato com o que realmente importa?</h2>
                 <div class="quiz-options"><button onclick="nextQ(1, 2)">Sim</button><button onclick="nextQ(1, 2)">Frequentemente</button></div>
             </div>
@@ -127,7 +130,7 @@
             </div>
             <div id="q4" class="quiz-question">
                 <h2>Suas relações atuais refletem quem você é hoje ou quem você costumava ser?</h2>
-                <div class="quiz-options"><button onclick="nextQ(4, 5)">Quem eu costumava ser</button><button onclick="nextQ(4, 5)">Não tenho certeza</button></div>
+                <div class="quiz-options"><button onclick="nextQ(4, 5)">Quem eu era</button><button onclick="nextQ(4, 5)">Não tenho certeza</button></div>
             </div>
             <div id="q5" class="quiz-question">
                 <h2>Você está pronta para se conectar com sua essência e priorizar seu bem-estar?</h2>
@@ -136,8 +139,8 @@
 
             <div id="quiz-result">
                 <h2>A resposta é SIM.</h2>
-                <p id="advice-text" style="font-size: 1.2rem; font-style: italic; color: #444; min-height: 100px;"></p>
-                <a href="https://wa.me/5571991078610" class="btn-gold">Agendar minha primeira consulta</a>
+                <p id="advice-text" style="font-size: 1.15rem; font-style: italic; color: var(--branco-off); min-height: 80px;"></p>
+                <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Acabei+de+fazer+o+teste+no+seu+site+e+senti+que+este+é+o+meu+momento+de+me+reinventar.+Gostaria+de+agendar+uma+consulta." class="btn-gold" style="margin-top: 25px;">Agendar Primeira Consulta</a>
             </div>
         </div>
     </section>
@@ -147,33 +150,22 @@
             <img src="https://images.pexels.com/photos/32480454/pexels-photo-32480454.jpeg" alt="Reflexão Junguiana">
         </div>
         <div class="jung-content" data-aos="fade-left">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 20px; color: var(--verde-militar);">A Abordagem</p>
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 15px; color: var(--verde-militar);">A Abordagem</p>
             <blockquote>"Quem olha para fora sonha, quem olha para dentro desperta."</blockquote>
-            <p>Utilizo a Psicologia Analítica de Carl Jung como base para nossa jornada. Através dela, buscamos a <strong>individuação</strong>: o processo de integrar todas as partes da sua psique para que você possa viver em harmonia com sua essência real, transformando sombras em potencial de reinvenção.</p>
+            <p>Utilizo a Psicologia Analítica de Carl Jung como base. Através da <strong>individuação</strong>, buscamos integrar sua psique para viver em harmonia com sua essência, transformando sombras em potencial de reinvenção.</p>
         </div>
     </section>
 
     <section class="benefits-section">
-        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-            <h2 style="font-size: 2.5rem;">Por que investir na sua jornada?</h2>
-            <p style="font-style: italic; margin-top: 10px;">A terapia é o maior ato de coragem e cuidado com sua própria história.</p>
-        </div>
+        <h2 style="font-size: 2.2rem; text-align: center;">Por que investir na sua jornada?</h2>
         <div class="benefits-grid">
-            <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="benefit-card" data-aos="fade-up">
                 <h4>Clareza nas Escolhas</h4>
-                <p>Aprenda a distinguir o que é seu e o que é expectativa externa, ganhando autonomia para se reinventar no trabalho e na vida.</p>
+                <p>Aprenda a distinguir o que é seu e o que é expectativa externa, ganhando autonomia para se reinventar.</p>
             </div>
-            <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-                <h4>Relacionamentos Autênticos</h4>
-                <p>Ao se conectar com sua essência, você estabelece limites saudáveis e atrai conexões mais verdadeiras e profundas.</p>
-            </div>
-            <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
                 <h4>Paz no Silêncio</h4>
-                <p>Transforme os momentos de solitude em espaços de recarga, deixando de se sentir sozinha para se sentir preenchida por si mesma.</p>
-            </div>
-            <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
-                <h4>Saúde Mental Resiliente</h4>
-                <p>Desenvolva ferramentas internas para lidar com a ansiedade e o estresse sem perder o seu centro.</p>
+                <p>Transforme a solitude em recarga. Deixe de se sentir sozinha para se sentir preenchida por si mesma.</p>
             </div>
         </div>
     </section>
@@ -183,43 +175,42 @@
             <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: var(--dourado-suave); margin-bottom: 10px;">Conheça sua Guia</p>
             <h2>Silvia Santos</h2>
             <p>Minha missão é guiar pessoas em seus processos de reinvenção. Acredito que cada indivíduo possui uma essência vibrante que muitas vezes acaba soterrada por ruídos do cotidiano.</p>
-            <br>
-            <p>Especializada em jornada de bem-estar, integro a profundidade da teoria junguiana com a prática do acolhimento, garantindo que cada passo da sua descoberta seja feito com segurança.</p>
-            <a href="https://wa.me/5571991078610" class="btn-gold">Conhecer meu trabalho</a>
+            <p>Especializada em jornada de bem-estar, integro a profundidade junguiana com a prática do acolhimento, garantindo que você não caminhe sozinha.</p>
+            <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Gostaria+de+conhecer+mais+do+seu+trabalho." class="btn-gold">Conhecer meu trabalho</a>
         </div>
         <div class="about-image" data-aos="fade-left">
             <img src="https://images.pexels.com/photos/5739632/pexels-photo-5739632.jpeg" alt="Silvia Santos Psicóloga">
         </div>
     </section>
 
-    <section class="final-cta" id="contato">
+    <section class="final-cta">
         <div data-aos="zoom-in">
             <h2>Pronta para o primeiro passo?</h2>
-            <p>Não adie a pessoa que você pode se tornar. Agende sua primeira consulta e inicie sua jornada de reinvenção hoje mesmo.</p>
-            <a href="https://wa.me/5571991078610" class="btn-gold" style="background-color: var(--branco); color: var(--azul-petroleo);">Agendar Consulta</a>
+            <p>Não adie a pessoa que você pode se tornar. Agende hoje mesmo.</p>
+            <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Senti+o+chamado+no+seu+site+e+estou+pronta+para+o+meu+primeiro+passo.+Podemos+conversar?" class="btn-gold" style="background-color: var(--branco); color: var(--azul-petroleo);">Agendar Agora</a>
         </div>
     </section>
 
-    <footer style="padding: 40px; text-align: center; font-size: 0.8rem; opacity: 0.6;">
+    <footer style="padding: 30px; text-align: center; font-size: 0.75rem; opacity: 0.6;">
         © 2026 SILVIA SANTOS | RIO DE JANEIRO & ONLINE
     </footer>
 
     <div class="exit-popup" id="exitPopup">
         <div class="popup-box">
             <span class="close-popup" onclick="closePopup()">×</span>
-            <h2 style="color: var(--azul-petroleo);">Ainda aqui?</h2>
-            <p style="margin: 20px 0;">Às vezes, o passo mais difícil é o primeiro. Vamos conversar sem compromisso pelo WhatsApp?</p>
-            <a href="https://wa.me/5571991078610" class="btn-gold" style="background-color: #25d366; color: white; border: none;">Falar com Silvia agora</a>
+            <h2 style="color: var(--azul-petroleo);">Sua essência te chama.</h2>
+            <p style="margin: 20px 0;">O passo mais difícil é o primeiro, mas você não precisa dá-lo sozinha. Vamos conversar sem compromisso pelo WhatsApp?</p>
+            <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Eu+estava+quase+saindo+do+site,+mas+resolvi+te+dar+um+oi.+Podemos+conversar?" class="btn-gold" style="background-color: #25d366; color: white; border: none;">Falar com Silvia agora</a>
         </div>
     </div>
 
-    <a href="https://wa.me/5571991078610" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Vi+seu+site+e+gostaria+de+informações+sobre+as+consultas." class="whatsapp-float" target="_blank">
         <svg style="width:30px;height:30px" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42 1.56 1.56 2.41 3.63 2.41 5.83 0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.19-.3a8.232 8.232 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m-3.53 4.75c-.19 0-.52.07-.79.37-.27.3-.84.82-.84 2s.87 2.33.99 2.49c.12.17 1.71 2.61 4.15 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.56.2-1.03.14-1.15-.06-.12-.22-.19-.47-.31-.25-.12-1.44-.71-1.66-.8-.22-.08-.38-.12-.54.12-.17.24-.63.8-.78.96-.15.16-.3.18-.55.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.54-1.31-.74-1.79c-.19-.48-.39-.41-.54-.41"/></svg>
     </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({ duration: 1000, once: true });
 
         function nextQ(current, next) {
             document.getElementById('q' + current).classList.remove('active');
@@ -229,8 +220,8 @@
         function showResult() {
             const advices = [
                 "O silêncio não é ausência, é o único lugar onde sua essência fala. Não fuja dele, aprenda a habitá-lo para nunca mais se sentir sozinha.",
-                "Sua produtividade não define seu valor. Reinventar-se no trabalho começa por entender que sua essência merece pausas e silêncio.",
-                "A solidão se dissipa quando você se torna sua melhor companhia. Conectar-se com Jung é descobrir que você é um universo inteiro.",
+                "Sua produtividade não define seu valor. Reinventar-se no trabalho começa por entender que sua essência merece pausas e escuta.",
+                "A solidão se dissipa quando você se torna sua melhor companhia. Conectar-se com sua profundidade é descobrir que você é um universo inteiro.",
                 "Relacionamentos florescem quando você para de buscar no outro o que já habita em você. Descubra sua essência e o mundo se alinhará.",
                 "Saúde mental é a coragem de integrar suas sombras. Reinvente-se a cada ciclo, permitindo que sua luz guie suas novas escolhas."
             ];
