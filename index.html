@@ -40,7 +40,7 @@
         nav ul li { margin-left: 30px; }
         nav ul li a { text-decoration: none; color: var(--azul-escuro); font-size: 0.8rem; text-transform: uppercase; font-weight: 600; }
 
-        /* HERO - ALINHAMENTO E ESPAÇAMENTO REFINADOS */
+        /* HERO - BASE */
         .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; min-height: 100vh; align-items: center; padding: 120px 8% 80px; gap: 60px; }
         .hero-content { max-width: 550px; z-index: 2; text-align: left; }
         
@@ -122,14 +122,47 @@
         .popup-box { background: white; padding: 60px; max-width: 500px; text-align: center; border-radius: 4px; position: relative; color: var(--azul-escuro); }
         .close-popup { position: absolute; top: 15px; right: 15px; font-size: 2rem; cursor: pointer; color: #aaa; line-height: 1; }
 
-        /* Responsividade */
+        /* OTIMIZAÇÃO RESPONSIVA E MOBILE (Onde a mágica acontece Leo) */
         @media (max-width: 1024px) {
             .hero, .about-silvia, .jung-section { grid-template-columns: 1fr; text-align: center; padding: 100px 5% 60px; }
-            .hero-content { margin: 0 auto; text-align: center; }
             .hero-img-box { height: 45vh; margin-top: 40px; }
             .about-image img { height: 450px; }
             .about-image::after { display: none; }
             .about-silvia .content-box h2 { margin-bottom: 25px; }
+        }
+
+        /* AJUSTES ESPECÍFICOS PARA SMARTPHONES PEQUENOS (Abaixo de 768px) */
+        @media (max-width: 768px) {
+            /* Garante alinhamento à esquerda impecável no mobile */
+            .hero-content, .about-silvia .content-box { text-align: left; margin: 0; max-width: 100%; }
+            .hero-content p { max-width: 100%; text-align: left; }
+            
+            /* Reduz tamanhos de fonte grandes para não "gritar" na tela pequena */
+            .hero-content h1, .about-silvia .content-box h2 { font-size: 2.2rem; margin-bottom: 20px; }
+            .quiz-question h2 { font-size: 1.6rem; margin-bottom: 25px; line-height: 1.4; }
+            .final-cta h2 { font-size: 1.8rem; }
+            .final-cta p { margin-bottom: 40px; font-size: 1rem; }
+
+            /* CORREÇÃO DO QUIZ (Sua imagem do WhatsApp) */
+            .quiz-options {
+                display: flex;
+                flex-direction: column; /* Empilha os botões verticalmente */
+                align-items: center;
+                gap: 15px; /* Cria espaço uniforme entre os botões */
+                margin-top: 30px;
+            }
+            .quiz-options button {
+                width: 100%; /* Botões ocupam a largura total do container */
+                max-width: 320px; /* Mas não ficam exagerados */
+                margin: 0; /* Remove margens laterais antigas */
+                padding: 14px 20px;
+                font-size: 0.8rem;
+            }
+
+            /* Respiro extra para seções principais */
+            section { padding-left: 5%; padding-right: 5%; }
+            .final-cta { padding-top: 60px; padding-bottom: 60px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 55px; height: 55px; }
         }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
@@ -176,7 +209,7 @@
                 <div id="quiz-result">
                     <h2>A resposta é SIM.</h2>
                     <p id="advice-text" style="font-size: 1.25rem; font-style: italic; color: var(--branco-off); min-height: 100px; line-height: 1.5;"></p>
-                    <a href="https://wa.me/5571982656083" target="_blank" rel="noopener" class="btn-gold" style="margin-top: 35px;">Agendar Primeira Consulta</a>
+                    <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Acabei+de+fazer+o+teste+no+seu+site+e+senti+que+este+é+o+meu+momento+de+me+reinventar." target="_blank" rel="noopener" class="btn-gold" style="margin-top: 35px;">Agendar Primeira Consulta</a>
                 </div>
             </div>
         </section>
@@ -188,8 +221,7 @@
             <div class="jung-content" data-aos="fade-left">
                 <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 20px; color: var(--verde-militar); font-weight: 600;">Fundamentação</p>
                 <h2>Psicologia Analítica</h2>
-                <p>Baseio meu trabalho na <strong>Psicologia Analítica de Carl Jung</strong>, compreendendo o processo terapêutico como um caminho de autoconhecimento e ampliação da consciência.</p>
-                <p>Por meio da escuta simbólica e da integração dos conteúdos inconscientes, buscamos dar sentido às experiências, favorecendo escolhas mais autênticas e alinhadas com quem você é de fato.</p>
+                <p>Baseio meu trabalho na <strong>Psicologia Analítica de Carl Jung</strong>, compreendendo o processo terapêutico como um caminho de autoconhecimento e ampliação da consciência. Por meio da escuta simbólica e da integração dos conteúdos inconscientes, buscamos dar sentido às experiências, favorecendo escolhas mais autênticas e alinhadas com quem você é de fato.</p>
             </div>
         </section>
 
@@ -200,11 +232,11 @@
             <div class="sessions-grid">
                 <article class="session-card" data-aos="zoom-in-up">
                     <h4>O que é?</h4>
-                    <p>Um espaço ético de acolhimento e investigação profunda onde olhamos para suas dores e padrões. Através da escuta qualificada, trabalhamos na prevenção do sofrimento psíquico.</p>
+                    <p>Um espaço ético de acolhimento e investigação profunda onde olhamos para suas dores e padrões. Através da escuta qualificada, trabalhamos na prevenção do sofrimento psíquico e fortalecimento socioemocional.</p>
                 </article>
                 <article class="session-card" data-aos="zoom-in-up" data-aos-delay="100">
                     <h4>Como funciona?</h4>
-                    <p>As sessões são realizadas de forma <strong>100% remota</strong>. São encontros semanais focados na sua singularidade, criando um ambiente seguro para você se reinventar.</p>
+                    <p>As sessões são realizadas de forma <strong>100% remota</strong>. São encontros semanais focados na sua singularidade, criando um ambiente seguro para você se reinventar com suporte especializado.</p>
                 </article>
             </div>
         </section>
@@ -213,9 +245,9 @@
             <div class="content-box" data-aos="fade-right">
                 <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; color: var(--dourado-suave); font-weight: 600; margin-bottom: 15px;">A Profissional</p>
                 <h2>Silvia Santos</h2>
-                <p>Psicóloga (CRP 03/25810) com especialização em Psicopedagogia. Possuo experiência em acolhimento clínico, escuta qualificada e acompanhamento psicoterapêutico de adolescentes e adultos, com ou sem desenvolvimento atípico.</p>
+                <p>Psicóloga (CRP 03/25810) com especialização em Psicopedagogia. Possuo experiência em acolhimento clínico, escuta qualificada e acompanhamento psicoterapêutico de crianças, adolescentes e adultos, com ou sem desenvolvimento atípico.</p>
                 <p>Minha atuação une o foco em saúde mental com o fortalecimento de habilidades socioemocionais. Sou comprometida com uma prática ética, sensível às diversidades e fundamentada em teorias psicológicas contemporâneas.</p>
-                <a href="https://wa.me/5571982656083" target="_blank" rel="noopener" class="btn-gold">Conectar-se agora</a>
+                <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Gostaria+de+marcar+um+atendimento+clínico+com+você." target="_blank" rel="noopener" class="btn-gold">Conectar-se agora</a>
             </div>
             <div class="about-image" data-aos="fade-left">
                 <img src="img/foto-perfil-silvia.jpg" alt="Dra. Silvia Santos - Psicóloga Clínica">
@@ -226,13 +258,13 @@
             <div data-aos="zoom-in">
                 <h2>Pronta para o primeiro passo?</h2>
                 <p>Não adie a pessoa que você pode se tornar através da reinvenção. Agende sua consulta agora e inicie seu processo de autodescoberta.</p>
-                <a href="https://wa.me/5571982656083" target="_blank" rel="noopener" class="btn-gold" style="background-color: var(--branco); color: var(--azul-petroleo);">Agendar Consulta</a>
+                <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Senti+o+chamado+no+seu+site+e+estou+pronta+para+o+meu+primeiro+passo." target="_blank" rel="noopener" class="btn-gold" style="background-color: var(--branco); color: var(--azul-petroleo);">Agendar Consulta</a>
             </div>
         </section>
     </main>
 
     <footer role="contentinfo" style="padding: 40px 8%; text-align: center; border-top: 1px solid #eee;">
-        <p style="font-size: 0.8rem; letter-spacing: 1px; opacity: 0.7;">© 2026 SILVIA SANTOS | ATENDIMENTO 100% REMOTO</p>
+        <p style="font-size: 0.8rem; letter-spacing: 1px; opacity: 0.7;">© 2026 SILVIA SANTOS | PSICOLOGIA CLÍNICA | ATENDIMENTO 100% REMOTO</p>
     </footer>
 
     <div class="exit-popup" id="exitPopup">
@@ -240,7 +272,7 @@
             <span class="close-popup" onclick="closePopup()">&times;</span>
             <h2 style="color: var(--azul-petroleo); margin-bottom: 20px;">Sua essência te chama.</h2>
             <p style="margin-bottom: 30px;">O passo mais difícil é o primeiro. Vamos conversar sem compromisso pelo WhatsApp?</p>
-            <a href="https://wa.me/5571982656083" target="_blank" rel="noopener" class="btn-gold" style="background-color: #25d366; color: white;">Falar com Silvia agora</a>
+            <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Eu+estava+quase+saindo+do+site,+mas+resolvi+te+dar+um+oi." target="_blank" rel="noopener" class="btn-gold" style="background-color: #25d366; color: white;">Falar com Silvia agora</a>
         </div>
     </div>
 
@@ -250,7 +282,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1000, once: true, offset: 100 });
 
         function nextQ(current, next) {
             document.getElementById('q' + current).classList.remove('active');
@@ -263,7 +295,7 @@
                 "Sua produtividade não define seu valor. Reinventar-se no trabalho começa por entender que sua essência merece pausas e escuta.",
                 "A solidão se dissipa quando você se torna sua melhor companhia. Conectar-se com sua profundidade é descobrir que você é um universo inteiro.",
                 "Relacionamentos florescem quando você para de buscar no outro o que já habita em você. Descubra sua essência e o mundo se alinhará.",
-                "Saúde mental é a coragem de integrar suas sombras. Reinvente-se a cada ciclo, permitindo que sua luz guie suas novas escolhas."
+                "Saúde mental é a coragem de integrar suas sombras. Reinventar-se a cada ciclo, permitindo que sua luz guie suas novas escolhas."
             ];
             const randomAdvice = advices[Math.floor(Math.random() * advices.length)];
             document.getElementById('q5').classList.remove('active');
