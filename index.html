@@ -21,7 +21,6 @@
         body { font-family: 'Montserrat', sans-serif; background-color: var(--branco-off); color: var(--azul-escuro); line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
 
-        /* HEADER */
         header { display: flex; justify-content: space-between; align-items: center; padding: 25px 8%; background: transparent; position: absolute; width: 100%; z-index: 100; }
         .logo { font-size: 1.1rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--azul-escuro); }
         nav ul { display: flex; list-style: none; align-items: center; }
@@ -36,7 +35,7 @@
         .hero-img-box { position: relative; height: 70vh; }
         .hero-img-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* QUIZ SECTION - AJUSTADA PARA AZUL PETRÓLEO */
+        /* QUIZ SECTION */
         .quiz-section { background-color: var(--azul-petroleo); padding: 70px 8%; text-align: center; color: white; }
         .quiz-container { max-width: 800px; margin: 0 auto; min-height: 250px; display: flex; flex-direction: column; justify-content: center; }
         .quiz-question { display: none; }
@@ -47,31 +46,31 @@
         #quiz-result { display: none; padding: 40px; background: rgba(255,255,255,0.05); border-radius: 5px; }
         #quiz-result h2 { font-size: 2.2rem; color: var(--dourado-suave); margin-bottom: 15px; }
 
-        /* JUNG SECTION */
+        /* ABORDAGEM JUNG */
         .jung-section { padding: 70px 8%; background-color: var(--branco-off); display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; align-items: center; }
-        .jung-content blockquote { font-family: 'Playfair Display'; font-size: 1.8rem; font-style: italic; margin-bottom: 20px; color: var(--azul-petroleo); line-height: 1.3; }
+        .jung-content h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--azul-petroleo); }
         .jung-image img { width: 100%; height: 400px; object-fit: cover; }
 
-        /* BENEFITS SECTION */
-        .benefits-section { padding: 70px 8%; background-color: var(--branco); }
-        .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px; }
-        .benefit-card { padding: 25px; border-left: 3px solid var(--dourado-suave); background: var(--branco-off); }
-        .benefit-card h4 { font-family: 'Playfair Display'; font-size: 1.4rem; margin-bottom: 10px; }
+        /* PSICOTERAPIA INDIVIDUAL E SESSÕES */
+        .sessions-section { padding: 70px 8%; background-color: var(--branco); }
+        .sessions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 40px; }
+        .session-card { padding: 35px; border-left: 3px solid var(--dourado-suave); background: var(--branco-off); }
+        .session-card h4 { font-family: 'Playfair Display'; font-size: 1.6rem; margin-bottom: 15px; color: var(--azul-petroleo); }
+        .session-card p { font-size: 0.95rem; text-align: justify; }
 
-        /* SOBRE SILVIA - AZUL PETRÓLEO COM ESPAÇAMENTO AJUSTADO */
+        /* SOBRE SILVIA - FOTO ATUALIZADA */
         .about-silvia { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 80px 8%; gap: 80px; background-color: var(--azul-petroleo); color: white; }
         .about-image { position: relative; }
-        .about-image img { width: 100%; height: 500px; object-fit: cover; }
+        .about-image img { width: 100%; height: 600px; object-fit: cover; object-position: center; }
         .about-image::after { content: ''; position: absolute; top: 20px; right: -20px; width: 100%; height: 100%; border: 1px solid var(--dourado-suave); z-index: -1; }
-        .about-silvia .content-box p { margin-bottom: 15px; } /* Ajuste de espaçamento interno */
-        .about-silvia .btn-gold { margin-top: 15px; } /* Botão mais próximo do texto */
+        .about-silvia .content-box p { margin-bottom: 15px; font-size: 0.95rem; text-align: justify; }
+        .about-silvia .btn-gold { margin-top: 20px; }
 
         /* FINAL CTA */
         .final-cta { padding: 70px 8%; text-align: center; background-color: var(--verde-militar); color: white; }
         .final-cta h2 { font-size: 2.5rem; margin-bottom: 15px; }
-        .final-cta p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
 
-        .btn-gold { display: inline-block; background-color: var(--dourado-suave); color: var(--azul-escuro); padding: 14px 45px; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .btn-gold { display: inline-block; background-color: var(--dourado-suave); color: var(--azul-escuro); padding: 14px 45px; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border: none; cursor: pointer; }
         .btn-gold:hover { background-color: #c4ab7d; transform: translateY(-2px); }
 
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s; }
@@ -83,9 +82,9 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 1024px) {
-            .hero, .about-silvia, .jung-section, .benefits-grid { grid-template-columns: 1fr; padding: 50px 8%; }
+            .hero, .about-silvia, .jung-section, .sessions-grid { grid-template-columns: 1fr; padding: 50px 8%; }
             .hero-img-box { height: 40vh; }
-            .hero-content h1 { font-size: 2.5rem; }
+            .about-image img { height: 450px; }
         }
     </style>
 </head>
@@ -97,7 +96,7 @@
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="https://wa.me/5571982656083?text=Olá+Silvia!+Gostaria+de+entender+mais+sobre+a+jornada+de+bem-estar+e+marcar+um+horário." class="btn-gold" style="padding: 10px 25px; border-radius: 25px; margin-top: 0;">Falar com Silvia</a></li>
+                <li><a href="https://wa.me/5571982656083?text=Olá+Silvia!+Gostaria+de+entender+mais+sobre+a+jornada+de+bem-estar+e+marcar+um+horário." class="btn-gold" style="padding: 10px 25px; border-radius: 25px;">Falar com Silvia</a></li>
             </ul>
         </nav>
     </header>
@@ -109,7 +108,7 @@
             <a href="#quiz" class="btn-gold">Iniciar Jornada</a>
         </div>
         <div class="hero-img-box" data-aos="fade-left">
-            <img src="https://images.pexels.com/photos/5739632/pexels-photo-5739632.jpeg" alt="Psicóloga Silvia Santos">
+            <img src="https://images.pexels.com/photos/5739632/pexels-photo-5739632.jpeg" alt="Equilíbrio e Essência">
         </div>
     </section>
 
@@ -140,53 +139,56 @@
             <div id="quiz-result">
                 <h2>A resposta é SIM.</h2>
                 <p id="advice-text" style="font-size: 1.15rem; font-style: italic; color: var(--branco-off); min-height: 80px;"></p>
-                <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Acabei+de+fazer+o+teste+no+seu+site+e+senti+que+este+é+o+meu+momento+de+me+reinventar.+Gostaria+de+agendar+uma+consulta." class="btn-gold" style="margin-top: 25px;">Agendar Primeira Consulta</a>
+                <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Fiz+o+teste+no+seu+site+e+sinto+que+é+o+momento+de+me+priorizar.+Gostaria+de+agendar+uma+sessão." class="btn-gold" style="margin-top: 25px;">Agendar Primeira Consulta</a>
             </div>
         </div>
     </section>
 
     <section class="jung-section">
         <div class="jung-image" data-aos="fade-right">
-            <img src="https://images.pexels.com/photos/32480454/pexels-photo-32480454.jpeg" alt="Reflexão Junguiana">
+            <img src="https://images.pexels.com/photos/32480454/pexels-photo-32480454.jpeg" alt="Simbolismo Junguiano">
         </div>
         <div class="jung-content" data-aos="fade-left">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 15px; color: var(--verde-militar);">A Abordagem</p>
-            <blockquote>"Quem olha para fora sonha, quem olha para dentro desperta."</blockquote>
-            <p>Utilizo a Psicologia Analítica de Carl Jung como base. Através da <strong>individuação</strong>, buscamos integrar sua psique para viver em harmonia com sua essência, transformando sombras em potencial de reinvenção.</p>
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 15px; color: var(--verde-militar);">A Abordagem Técnica</p>
+            <h2>Psicologia Analítica</h2>
+            <p>Baseio meu trabalho na <strong>Psicologia Analítica de Carl Jung</strong>, compreendendo o processo terapêutico como um caminho de autoconhecimento e ampliação da consciência. Por meio da escuta simbólica e da integração dos conteúdos inconscientes, buscamos dar sentido às experiências, favorecendo escolhas mais autênticas e alinhadas com quem você é.</p>
         </div>
     </section>
 
-    <section class="benefits-section">
-        <h2 style="font-size: 2.2rem; text-align: center;">Por que investir na sua jornada?</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card" data-aos="fade-up">
-                <h4>Clareza nas Escolhas</h4>
-                <p>Aprenda a distinguir o que é seu e o que é expectativa externa, ganhando autonomia para se reinventar.</p>
+    <section class="sessions-section">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 10px; color: var(--verde-militar);">A Prática Clínica</p>
+            <h2 style="font-size: 2.2rem;">Psicoterapia Individual</h2>
+        </div>
+        <div class="sessions-grid">
+            <div class="session-card" data-aos="fade-up">
+                <h4>O que é?</h4>
+                <p>É um espaço de acolhimento e investigação profunda onde olhamos para as suas dores, padrões e desejos de mudança. Através da escuta qualificada, trabalhamos na prevenção do sofrimento psíquico e no fortalecimento das suas habilidades socioemocionais.</p>
             </div>
-            <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-                <h4>Paz no Silêncio</h4>
-                <p>Transforme a solitude em recarga. Deixe de se sentir sozinha para se sentir preenchida por si mesma.</p>
+            <div class="session-card" data-aos="fade-up" data-aos-delay="100">
+                <h4>Como funciona?</h4>
+                <p>As sessões podem ser realizadas de forma remota ou presencial. São encontros semanais focados na sua singularidade, criando um ambiente ético e seguro para que crianças, adolescentes ou adultos possam se reinventar com suporte especializado.</p>
             </div>
         </div>
     </section>
 
     <section class="about-silvia" id="sobre">
         <div class="content-box" data-aos="fade-right">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: var(--dourado-suave); margin-bottom: 10px;">Conheça sua Guia</p>
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: var(--dourado-suave); margin-bottom: 10px;">A Profissional</p>
             <h2>Silvia Santos</h2>
-            <p>Minha missão é guiar pessoas em seus processos de reinvenção. Acredito que cada indivíduo possui uma essência vibrante que muitas vezes acaba soterrada por ruídos do cotidiano.</p>
-            <p>Especializada em jornada de bem-estar, integro a profundidade junguiana com a prática do acolhimento, garantindo que você não caminhe sozinha.</p>
-            <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Gostaria+de+conhecer+mais+do+seu+trabalho." class="btn-gold">Conhecer meu trabalho</a>
+            <p>Psicóloga (CRP 03/25810) com especialização em Psicopedagogia. Possuo experiência em acolhimento clínico, escuta qualificada e acompanhamento psicoterapêutico de crianças, adolescentes e adultos, com ou sem desenvolvimento atípico.</p>
+            <p>Minha atuação une o foco em saúde mental com o fortalecimento de habilidades socioemocionais. Sou comprometida com uma prática ética, sensível às diversidades e fundamentada em teorias psicológicas contemporâneas.</p>
+            <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Gostaria+de+conhecer+mais+do+seu+trabalho." class="btn-gold">Entrar em contato</a>
         </div>
         <div class="about-image" data-aos="fade-left">
-            <img src="https://images.pexels.com/photos/5739632/pexels-photo-5739632.jpeg" alt="Silvia Santos Psicóloga">
+            <img src="foto-perfil-silvia.jpg" alt="Dra. Silvia Santos">
         </div>
     </section>
 
     <section class="final-cta">
         <div data-aos="zoom-in">
             <h2>Pronta para o primeiro passo?</h2>
-            <p>Não adie a pessoa que você pode se tornar. Agende hoje mesmo.</p>
+            <p>Agende sua consulta agora e inicie seu processo de autodescoberta.</p>
             <a href="https://wa.me/5571982656083?text=Olá+Silvia!+Senti+o+chamado+no+seu+site+e+estou+pronta+para+o+meu+primeiro+passo.+Podemos+conversar?" class="btn-gold" style="background-color: var(--branco); color: var(--azul-petroleo);">Agendar Agora</a>
         </div>
     </section>
